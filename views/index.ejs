@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tails Command Application</title>
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+			var socket = io();
+			socket.on('lastlines',function(data){
+				console.log(data['demo.txt']);
+				var onlydiv = document.getElementById('onlydiv');
+				for(key in data){
+					var h1 = document.createElement('h1');
+					h1.innerHTML = key;
+
+					var tt = document.createElement('p');
+					tt.id = key;
+					tt.innerHTML = data[key];
+
+					onlydiv.appendChild(h1);
+					onlydiv.appendChild(tt);
+				}
+			});
+			
+		</script>
+	</head>
+	<body>
+		<div id="onlydiv">
+			
+		</div>
+	</body>
+</html>

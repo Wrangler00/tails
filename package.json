@@ -1,0 +1,19 @@
+{
+  "name": "filehandling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "abhishek kumar",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "read-last-lines": "^1.2.0",
+    "read-multiple-files": "^1.1.1",
+    "socket.io": "^2.0.3",
+    "tail": "^1.2.2"
+  }
+}
